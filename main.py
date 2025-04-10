@@ -14,17 +14,17 @@ def index():
 # Habilidades dinámicas
 @app.route('/', methods=['POST'])
 def process_form():
-    button_python = request.form.get('button_python')
-    return render_template('index.html', button_python=button_python)
+    if request.form.get('button_python'):
+        return render_template('index.html', button_python=True)
+    elif request.form.get('button_discord'):
+        return render_template('index.html', button_discord=True)
+    elif request.form.get('button_html'):
+        return render_template('index.html', button_html=True)
+    elif request.form.get('button_db'):
+        return render_template('index.html', button_db=True)
+    else:
+        return render_template('index.html')
 
-    button_discord = request.form.get('button_discord')
-    return render_template('index.html', button_discord=button_discord)
-
-    button_python = request.form.get('button_python')
-    return render_template('index.html', button_python=button_python)
-
-    button_python = request.form.get('button_python')
-    return render_template('index.html', button_python=button_python)
 
 
 if __name__ == "__main__":

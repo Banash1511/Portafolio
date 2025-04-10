@@ -29,7 +29,7 @@
     <main class="main">
       <!-- Vista previa -->
       <section class="main__home home" id="home">
-        <h1 class="home__title">NAME SURNAME</h1>
+        <h1 class="home__title">Martín Arias</h1>
         <p class="home__subtitle">WEB-DEVELOPER, PYTHON PROGRAMMER</p>
       </section>
       <!-- Acerca de mí -->
@@ -53,10 +53,10 @@
           </div>
           <img
             class="info-block__img"
-            src="../static/img/profile.png"
+            src="../static/img/Yor.jpg"
             alt="me"
-            width="250"
-            height="250"
+            width="500"
+            height="500"
           />
         </div>
       </section>
@@ -121,6 +121,17 @@
               <img class="project__img" src="../static/img/Discordp.png" alt="project" width="500">
               <a class="project__link" href="">Abierto en GitHub</a>
           </div>
+        {% elif button_html%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/htmlp.png" alt="project" width="500">
+              <a class="project__link" href="">Abierto en GitHub</a>
+          <div>
+        {% elif button_db%}
+              <div class="skills__project project" id="project">
+                  <img class="project__img" src="../static/img/dbp.png" alt="project" width="500">
+                  <a class="project__link" href="">Abierto en GitHub</a>
+              </div>
+          </div>
         {% endif %}
       </section>
       <!-- Formulario de contacto -->
@@ -128,7 +139,7 @@
         <h2 class="feedback__title">FEEDBACK</h2>
         <form action="" method="POST" class="feedback__form form">
           <label for="email">
-            <input type="email" class="form__input" name="email" id="email" placeholder="Введите E-mail" required>
+            <input type="email" class="form__input" name="email" id="email" placeholder="E-mail" required>
           </label>
           <label for="text">
             <textarea name="text" class="form__input" id="text" cols="70" rows="10" required placeholder="Comment"></textarea>
